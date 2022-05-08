@@ -1,0 +1,29 @@
+<div class="check-in-container">
+    <ul>
+        <li *ngFor="let index of [0,1,2,3,4,5]">
+            <div class="check-in-dados">
+                <h3>Recife &#10132; Belo Horizonte &#9992;</h3>
+                <p>
+                    12/04/2021 - 10:30
+                </p>
+            </div>
+            <div class="check-in-button">
+                <button (click)="show_modal($event)" class="check-in-button-get" value="{{ index }}">Fazer check-in</button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="check-in-modal">
+        <div class="check-in-modal2">
+            <div class="check-in-text-confirm">
+                <h4>Confirmar check-in no voo Recife &#10132; Belo Horizonte, 12/04/2021 - 10:30 </h4>
+            </div>
+            <div class="check-in-buttons">
+                <button (click)="hidden_modal_confirm($event)" value="-1" class="check-in-confirm">Confirmar</button>
+                <button (click)="hidden_modal_cancel($event)" value="-1" class="check-in-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+

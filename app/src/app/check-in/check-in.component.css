@@ -1,0 +1,125 @@
+ul, li {
+    margin:0;
+    padding: 0;
+}
+
+h3{
+    font-size: 1.2rem;
+    margin:0 0 10px 0;
+}
+
+p{
+    margin:0;
+}
+
+.check-in-container {
+    height: 100vh;
+    position: relative;
+    padding:0.75rem;
+}
+
+.check-in-container ul {
+    list-style-type: none;
+}
+
+.check-in-container ul li{
+    padding: 0.75rem;
+    height: 75px;
+    background-color: rgb(52, 235, 219);
+    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check-in-dados{
+    display: flex;
+}
+
+.check-in-dados p{
+    margin-left: 4rem;
+    font-weight: bold;
+}
+
+.check-in-button{
+}
+
+.check-in-button button {
+    background-color: #4CAF50; 
+    border-radius: 2rem;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.check-in-modal{
+    height: 300px;
+    width: 650px;
+    background-color: rgb(117, 206, 212);
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    margin: auto; 
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;
+    display: none;
+}
+
+.check-in-text-confirm{
+    margin-top: 20px;
+}
+.check-in-buttons{
+    margin-top:120px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.check-in-buttons button{
+    height: 3rem;
+    width: 7rem;
+}
+
+.check-in-confirm {
+    background-color: #4CAF50;
+}
+
+.check-in-cancel{
+    background-color: rgb(240, 68, 68);
+}
+
+@media screen and (max-width: 768px) {
+    .check-in-modal {
+        width: 90%;
+        height: 150px;
+    }
+
+    .check-in-modal {
+        font-size: 0.9rem;
+    }
+
+    .check-in-modal h4{
+        font-size: 1rem;
+    }
+
+    .check-in-modal2 {
+        height: 100%;
+    }
+
+    .check-in-buttons{
+        margin-top:45px;
+    }
+
+    .check-in-button button {
+        padding: 5px 16px;
+    }
+}
