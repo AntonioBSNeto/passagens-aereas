@@ -1,0 +1,43 @@
+body {
+    font-family: 'Anek', sans-serif;
+}
+@font-face {
+          font-family: 'Anek';
+          src: url('../Fonts/AnekTamil-VariableFont_wdth,wght.ttf');
+          font-weight: normal;
+          font-style: normal;
+        }
+nav {
+    margin-left: 0%;
+    margin-top: 0%;
+    background: #556773;
+    background: -webkit-linear-gradient(to right, #0B1840, #556773);
+    background: linear-gradient(to right, #0B1840, #556773);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: white;
+    min-width: 557px;
+}
+
+.LogoNome {
+    margin-left: 1%;
+    margin-bottom: 0.35%;
+}
+
+.nav-link {
+    color: white
+}
+
+.navbar-brand {
+    color: white
+    
+}
+
+.navbar-brand:hover{
+    color: #556773;
+}
+
+.nav-item .nav-link{
+    color: white
+}
