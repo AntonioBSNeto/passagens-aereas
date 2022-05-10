@@ -17,7 +17,7 @@ nav {
     background-size: cover;
     background-position: 0 0;
     color: white;
-    min-width: 557px;
+    min-width: 670px;
 }
 
 .LogoNome {
@@ -40,4 +40,15 @@ nav {
 
 .nav-item .nav-link{
     color: white
+}
+
+.h2DropNotif {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    text-align: center;
+}
+
+.pDropNotif {
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
