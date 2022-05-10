@@ -13,9 +13,9 @@ p{
 }
 
 .check-in-container {
-    height: 100vh;
     position: relative;
     padding:0.75rem;
+    background-color: #96d4bc;
 }
 
 .check-in-container ul {
