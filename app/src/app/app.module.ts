@@ -25,7 +25,7 @@ import { CancelarVooComponent } from './cancelar-voo/cancelar-voo.component';
     AppComponent,
     LoginComponent,
     EsqueceuSenhaComponent,
-    CheckInComponent
+    CheckInComponent,
     CancelarVooComponent,
     BuscarVooComponent,
     SelecionarVooComponent,
