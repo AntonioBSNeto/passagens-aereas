@@ -14,7 +14,7 @@
 
 #payment {
 	font-family: 'Lato', sans-serif;
-	background-color: #96d4bc;
+	background-color: white;
 	background-size: cover;
 	background-position: center;
 	color: #191a1e;
@@ -22,7 +22,7 @@
 
 .payment-form {
 	position: relative;
-	background: #fff;
+	background: #adb3b1;
 	max-width: 642px;
 	width: 100%;
 	margin: auto;
@@ -191,4 +191,8 @@
 .payment-cta p {
 	font-size: 22px;
 	color: #191a1e;
+}
+
+.font-color {
+	color: #4fa3e3;
 }

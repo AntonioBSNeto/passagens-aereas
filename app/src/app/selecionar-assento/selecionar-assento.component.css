@@ -6,10 +6,24 @@
 	color: #191a1e;
 }
 
-.choose-flight {
+.choose-seat {
     background-color: #96d4bc;
 }
 
 .container {
-    margin-top: 50px;
+	margin-top: 50px;
+    margin-bottom: 80px;
+	background-color: white;
 }
+
+.font-color {
+	color: #4fa3e3;
+}
+
+.row {
+	margin-top: 40px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+

@@ -21,93 +21,45 @@
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
-					 <div class="col-md-4">
+					 <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-xs-12">
 						<div class="booking-cta">
 							<h1>Encontre os melhores voos</h1>
 							<p>Compre sua passagem com preços imperdíveis!</p>
 						</div>
 					</div>
-					<div class="col-md-7 col-md-offset-1">
+					<div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-xs-12">
 						<div class="booking-form">
 							<form>
-								<div class="form-group">
-									<div class="form-checkbox">
-										<label for="ida-e-volta">
-											<input type="radio" id="ida-e-volta" name="flight-type">
-											<span></span>Ida e olta
-										</label>
-										<label for="ida-ou-volta">
-											<input type="radio" id="ida-ou-volta" name="flight-type">
-											<span></span>Só ida ou volta
-										</label>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="origem" class="form-label">Origem</label>
+											<select name="origem" id="origem" class="form-select" ngModel>
+												<!-- <option *ngIf="voos.length === 0; else semVoos">
+													Nenhum voo encontrado
+												</option> -->
+												<!-- <ng-template #semVoos> -->
+													<option value="default"></option>
+													<option *ngFor="let origem of origens" value="origem.origem">{{origem.origem}}</option>
+												<!-- </ng-template> -->
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="destino" class="form-label">Destino</label>
+											<select name="destino" id="destino" class="form-select" ngModel>
+												<option value="default"></option>
+												<option *ngFor="let destino of destinos" value="destino.destinox">{{destino.destino}}</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<span class="form-label">Origem</span>
-											<input class="form-control" type="text" placeholder="Cidade ou aeroporto">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<span class="form-label">Destino</span>
-											<input class="form-control" type="text" placeholder="Cidade ou aeroporto">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<span class="form-label">Data da viagem de ida</span>
+											<span class="form-label">Data da viagem</span>
 											<input class="form-control" type="date" required>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<span class="form-label">Data da viagem de volta</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<span class="form-label">Adults (+ 12 anos)</span>
-											<select class="form-control">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-                                                <option>3</option> 
-                                                <option>4</option>
-                                                <option>5</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<span class="form-label">Crianças (0 - 11 anos)</span>
-											<select class="form-control">
-												<option>0</option>
-												<option>1</option>
-												<option>2</option>
-                                                <option>3</option> 
-                                                <option>4</option>
-                                                <option>5</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<span class="form-label">Travel class</span>
-											<select class="form-control">
-												<option>Classe Econômica</option>
-												<option>Classe Executiva</option>
-												<option>Primeira Classe</option>
-											</select>
-											<span class="select-arrow"></span>
 										</div>
 									</div>
 								</div>
