@@ -51,13 +51,14 @@ export class UserDB {
         });
     }
 
-    public async listarVoosComprados(): Promise<any> {
+    public listarVoosComprados(): any {
         const db = getDatabase();
         const auth = getAuth();
         const user = auth.currentUser;
+        let voosComprados: Voo[] = []; 
         if (user !== null){
-            return onValue(ref(db, `/users/btoa{user.email}/voos-comprados`), (snapshot) => {
-                let voosComprados: Voo[] = []; 
+            onValue(ref(db, `/users/btoa{user.email}/voos-comprados`), (snapshot) => {
+                
                 snapshot.forEach((childSnapshot: any) => {
                     let vooComprado = childSnapshot.val();
 
@@ -66,11 +67,10 @@ export class UserDB {
                     vooComprado.key = childSnapshot.key;
                     voosComprados.push(vooComprado)
                 })
-                return voosComprados;
+                
             });
+        return voosComprados;
         }
-
-
     }
 
 }
