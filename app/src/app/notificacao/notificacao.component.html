@@ -1,38 +1,12 @@
-<!--notificação em dropdown bootstrap-->
-<!--div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        <span class="glyphicon glyphicon-bell"></span>
-        <span class="label label-primary">{{notificacoes.length}}</span>
-    </button>
-    <ul class="dropdown-menu">
-        <li *ngFor="let notificacao of notificacoes">
-            <a href="#">{{notificacao.mensagem}}</a>
-        </li>
-    </ul>
-</div-->
+<!--notificações que o usuario recebeu-->
 <div class="dropdown">
-  <button class="btn btn-outline-secondary" type="button" data-toggle="dropdown">
-    Notificações <span class="badge badge-light">4</span>
+  <button class="btn btn-outline-secondary" type="button" data-bs-toggle="dropdown" id="dropdownNotif">
+    Notificações <span class="badge badge-light">{{notificacoes.length}}</span>
   </button>
-  <ul class="dropdown-menu">
-    <li>
-      <h2>PROMOÇÃO</h2>
-      <p>IMPERDIVEL!! Compre uma passagem por apenas R$ 4.10</p>
-      <div class="dropdown-divider"></div>
-    </li>
-    <li>
-      <h2>PROMOÇÃO</h2>
-      <p>Aproveite! Viagem para o Sudão do Sul pela metade do preço</p>
-      <div class="dropdown-divider"></div>
-    </li>
-    <li>
-      <h2>AVISO DE VIAGEM</h2>
-      <p>Não esqueça, sua viagem para Coreia do Norte é amanhã, boa viagem!</p>
-      <div class="dropdown-divider"></div>
-    </li>
-    <li>
-      <h2>PROMOÇÃO</h2>
-      <p>Viagem para ver o parque das esculturas no Recife, compre uma passagem e ganhe um caldo de cana!</p>
+  <ul class="dropdown-menu" aria-labelledby="dropdownNotif">
+    <li *ngFor="let notificacao of notificacoes">
+      <h2 class="h2DropNotif">{{notificacao.titulo}}</h2>
+      <p class="pDropNotif">{{notificacao.descricao}}</p>
       <div class="dropdown-divider"></div>
     </li>
   </ul>
