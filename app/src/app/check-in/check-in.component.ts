@@ -1,18 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { Autenticacao } from '../services/auth.service';
+import { UserDB } from 'src/app/services/user-db.service';
 
 @Component({
   selector: 'app-check-in',
   templateUrl: './check-in.component.html',
-  styleUrls: ['./check-in.component.css']
+  styleUrls: ['./check-in.component.css'],
+  providers: [UserDB]
 })
 export class CheckInComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userDB: UserDB,
+    private autenticacao: Autenticacao
+  ) { }
 
   ngOnInit(): void {
   }
 
   show_modal(event: Event){
+    this.userDB.listarAlunos();
+
     const confirm_button = document.querySelector<HTMLElement>(".check-in-confirm");
     const modal_window = document.querySelector<HTMLElement>(".check-in-modal");
 
