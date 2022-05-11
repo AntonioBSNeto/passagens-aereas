@@ -13,8 +13,17 @@
 .container {
     margin-top: 50px;
     margin-bottom: 80px;
+	background-color: white;
 }
 
 .row {
-	margin-top: 20px;
+	margin-top: 40px;
+	background-position: center;
+	background-color: #adb3b1;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.font-color {
+	color: #4fa3e3;
 }
