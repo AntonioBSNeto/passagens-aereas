@@ -1,4 +1,3 @@
-import {PromocaoService} from "./services/promocao.service";
 import { Component, OnInit } from '@angular/core';
 import { initializeApp } from 'firebase/app';
 
@@ -10,11 +9,6 @@ import { initializeApp } from 'firebase/app';
 export class AppComponent {
   title = 'app';
 
-  constructor(private promocaoService : PromocaoService) {
-
-  }
-  criarPromocao($event: any) {
-    this.promocaoService.adicionar($event);
   ngOnInit() {
     let firebaseConfig = {
       apiKey: "AIzaSyAhvJu__52mfMXdddpQRhYDPWNRDIJr0QA",

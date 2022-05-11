@@ -18,8 +18,6 @@ import { SelecionarAssentoComponent } from './selecionar-assento/selecionar-asse
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { Autenticacao } from './services/auth.service';
 import { NotificacaoComponent } from './notificacao/notificacao.component';
-import { PagPromocaoComponent } from './pag-promocao/pag-promocao.component';
-import { ExtratoPromocoesComponent } from './extrato-promocoes/extrato-promocoes.component';
 import { CancelarVooComponent } from './cancelar-voo/cancelar-voo.component';
 
 @NgModule({
@@ -34,13 +32,9 @@ import { CancelarVooComponent } from './cancelar-voo/cancelar-voo.component';
     SelecionarAssentoComponent,
     PagamentoComponent,
     NotificacaoComponent,
-    PagPromocaoComponent,
-    ExtratoPromocoesComponent,
-
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
