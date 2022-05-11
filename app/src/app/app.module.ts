@@ -19,6 +19,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { Autenticacao } from './services/auth.service';
 import { NotificacaoComponent } from './notificacao/notificacao.component';
 import { CancelarVooComponent } from './cancelar-voo/cancelar-voo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CancelarVooComponent } from './cancelar-voo/cancelar-voo.component';
     SelecionarAssentoComponent,
     PagamentoComponent,
     NotificacaoComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
