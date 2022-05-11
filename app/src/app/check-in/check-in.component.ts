@@ -19,7 +19,7 @@ export class CheckInComponent implements OnInit {
   }
 
   show_modal(event: Event){
-    this.userDB.listarAlunos();
+    //this.userDB.listarAlunos();
 
     const confirm_button = document.querySelector<HTMLElement>(".check-in-confirm");
     const modal_window = document.querySelector<HTMLElement>(".check-in-modal");
