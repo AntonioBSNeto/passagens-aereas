@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../shared/user.model';
 import { Autenticacao } from "./auth.service";
+import { Voo } from "../cancelar-voo/voo";
 
 @Injectable()
 export class UserDB {
@@ -48,6 +49,28 @@ export class UserDB {
             })
             return users;
         });
+    }
+
+    public async listarVoosComprados(): Promise<any> {
+        const db = getDatabase();
+        const auth = getAuth();
+        const user = auth.currentUser;
+        if (user !== null){
+            return onValue(ref(db, `/users/btoa{user.email}/voos-comprados`), (snapshot) => {
+                let voosComprados: Voo[] = []; 
+                snapshot.forEach((childSnapshot: any) => {
+                    let vooComprado = childSnapshot.val();
+
+                    console.log(vooComprado)
+                    console.log(vooComprado)
+                    vooComprado.key = childSnapshot.key;
+                    voosComprados.push(vooComprado)
+                })
+                return voosComprados;
+            });
+        }
+
+
     }
 
 }
