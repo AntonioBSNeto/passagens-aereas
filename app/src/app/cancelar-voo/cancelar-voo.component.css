@@ -26,6 +26,7 @@ form {
 
 .pIniCanc {
     margin-top: 1%;
+    min-width: 557px;
 }
 
 
@@ -42,16 +43,19 @@ th {
     min-width: 18.5vw;
 }
 
-td {
-    padding: 2vh 4vw 2vh 4vw;
-}
+
 
    td, th {
     text-align: center;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    min-width: 18vmax;
+    max-width: 18vmax;
 }
-
+td {
+    padding: 2vh 4vw 2vh 4vw;
+    min-width: 120px;
+}
 .container-fluid {
     min-width: 557px;
 }
@@ -69,4 +73,8 @@ td {
 .btn-cancelarFinal {
     background-color: #0B1840;
     border-color: #0B1840;
+}
+
+.avisoDigErr {
+    color: red;
 }

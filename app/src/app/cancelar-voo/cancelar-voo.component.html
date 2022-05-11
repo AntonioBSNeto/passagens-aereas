@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" (mousemove)="onMove()">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,24 +25,27 @@
               <td>{{v.origem}}</td>
               <td>{{v.destino}}</td>
               <td><button type="button" class="btn btn-primary btn-cancelarInicial" data-bs-toggle="modal" 
-              data-bs-target="#popupSenha" (click)="armazenaCodigo(v.codigo)">Cancelar</button></td>
+              data-bs-target="#popupSenha" (click)="armazenaCodigo(v.codigo)" (click)="limparCampoConfirmacao()">Cancelar</button></td>
               
             </tr>
         </table>
         <div class="popUpSenha">
-          <div class="modal fade" id="popupSenha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="popupSenha" tabindex="-1" aria-labelledby="popupTitulo" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Confirmar cancelamento</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h5 class="modal-title" id="popupTitulo">Confirmar cancelamento</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #fecharPopUp></button>
                 </div>
                 <div class="modal-body">
-                  <p>Você deseja realmente cancelar este vôo?</p>
+                  <p>Digite "QUEROCANCELAR" abaixo para prosseguir com o cancelamento deste vôo.</p>
+                  <p  *ngIf="digitouErrado" class="avisoDigErr"> Por favor, digite corretamente "QUEROCANCELAR" para cancelar o vôo!</p>
+                  <!-- <label for="senhaCancelar">Senha:</label> -->
+                <input class="form-control" id="campoConfirmar" placeholder="Digite aqui" [(ngModel)]="campoConfirmacao">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" 
+                  <button type="button" class="btn btn-primary btn-cancelarFinal"
                   (click)="cancelarVoo(retornaCodigo())">Cancelar</button>
                 </div>
               </div>
